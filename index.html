@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>金瑞阳组件库</title>
+	<title>组件库</title>
 	<link rel="stylesheet" type="text/css" href="dest/css/main.css">
 	<link rel="stylesheet" type="text/css" href="dest/base_css/base.css" />
 	<link rel="stylesheet" type="text/css" href="dest/base_css/iconfont.css" />
@@ -55,7 +55,7 @@
 		<div class="container">
 			<h2>bottom组件</h2>
 			<div class="demo_item">
-				<jy:button class="test" id="test1" button-size="large" value="点击事件" onclick="alert(1)">
+				<jy:button class="test" button-size="large" value="点击事件" onclick="alert(1)">
 			    </jy:button>
 			    <jy:button class="test"  value="中中中">
 			    </jy:button>
@@ -93,29 +93,10 @@
 			</div>
 		</div>
 		<div class="container" >
-			<h2>page组件</h2>
-			<div class="demo_item">
-				<jy:page id="demo1" show-pages="true" show-total="true" name="ceshi1"></jy:page>
-				<br>
-				<jy:page id="demo2" class="asd" show-pages="true" name="ceshi2"></jy:page>
-				<br>
-				<jy:page name="ceshi3" show-pages="true" show-total="true"></jy:page>
-			</div>
-		</div>
-		<div class="container" >
 			<h2>alert组件</h2>
 			<div class="demo_item">
 				<jy:button class="test" onclick="textAL()" value="弹窗">
 			    </jy:button>
-			</div>
-		</div>
-		<div class="container" >
-			<h2>input组件</h2>
-			<div class="demo_item">
-				<div style="width: 300px"><jy:input require="true" tips="测试1" validate="/^[a-zA-Z]+$/" type="password" class="demo" id="popi1"></jy:input></div>
-				<div style="width: 300px"><jy:input showpassword="true" require="true" tips="测试1" validate="/^[a-zA-Z]+$/" type="password" class="demo" id="popi8"></jy:input></div>
-				<div style="width: 300px"><jy:input require="true" tips="测试2" validate="what" label="测试" name="mnb" class="demo"></jy:input></div>
-				<div style="width: 300px"><jy:input disable="false" placeholder="lkjk" id="popi3"></jy:input></div>
 			</div>
 		</div>
 		<div class="container" >
@@ -127,41 +108,6 @@
 			    </jy:textarea>
 			    <jy:textarea id="test3" class="test3" placeholder="请输入" textarea-size="large" resize="false">
 			    </jy:textarea>
-			</div>
-		</div>
-		<div class="container" >
-			<h2>select组件</h2>
-			<div class="demo_item">
-				<div style="width:50%;float: left;text-align: center;">
-					<div style="text-align: center;height:40px;line-height: 40px;">一行显示</div>
-					<jy:select options="getOption" id="selectCity" changes='awdawd' name="selecCity" value="2" label='选择地区' label-style='inline'></jy:select>
-				</div>
-				<div style="width:50%;float: left;">
-					<div style="text-align: center;height:40px;line-height: 40px;">两行显示</div>
-					<jy:select options="selectData" id="selectCitys" changes='changeCity' name="selecCitys" value="4" label='选择地区2' label-style='noline'></jy:select>
-				</div>
-			</div>
-		</div>
-		<div class="container" >
-			<h2>menu组件</h2>
-			<div class="demo_item">
-				<jy:menu menu-data="menuData" class="demo" id="name" menu-open="menuOpen"></jy:menu>
-			</div>
-		</div>
-		<div class="container">
-			<h2>nav组件</h2>
-			<div class="demo_item">
-				<jy:nav class="demo123" id="weq">
-			        <jy:nav-title data-to="/qwe"><p>题目一</p></jy:nav-title>
-			        <jy:nav-title><p>题目二</p><jy:nav-title-item data-to="/qwe1">demo1</jy:nav-title-item><jy:nav-title-item data-to="/qwe2">demo2</jy:nav-title-item><jy:nav-title-item data-to="/qwe3">demo3</jy:nav-title-item></jy:nav-title>
-			        <jy:nav-title data-to="/qwe4"><p>题目三</p><jy:nav-title-item data-to="/qwe1">demo1</jy:nav-title-item><jy:nav-title-item data-to="/qwe2">demo2</jy:nav-title-item><jy:nav-title-item data-to="/qwe3">demo3</jy:nav-title-item></jy:nav-title>
-			    </jy:nav>
-			</div>
-		</div>
-		<div class="container" >
-			<h2>tree组件</h2>
-			<div class="demo_item">
-				<jy:tree class="qwe" jy-onlyOne="true" row-click="rowClick" row-code="rowCode" tree-data="treeData"></jy:tree>
 			</div>
 		</div>
 		<div class="container" >
@@ -180,12 +126,6 @@
 					<span class="demoitem">tips在下边xiamian显示</span>
 				</jy:tips>
 			</div>
-		</div>
-		<div class="container" >
-			<h2>date组件</h2>
-			<div id="jy_date" class="jy_date_div"></div>
-			<div id="jy_dates" class="jy_date_div" style="margin-top:200px"></div>
-			<div class="getValues" onclick="getValues()">取值</div>
 		</div>
 	</div>
 	<jy-dialog width="30%" id='testV' close-on-click-mask>
@@ -282,63 +222,6 @@
 	}
 	function testfun(){
 		document.getElementById('testS').show();
-	}
-	//select
-		selectData = [
-		{
-				name:'option4',
-				val:'4',
-				disable:false
-			},
-			{
-				name:'option5',
-				val:'5',
-				disable:false
-			},
-			{
-				name:'option6',
-				val:'6',
-				disable:true
-			},
-			{
-				name:'option6',
-				val:'6',
-				disable:true
-			},
-			{
-				name:'option6',
-				val:'6',
-				disable:true
-			},
-	]
-	function getOption(){
-		var selectDatas = [
-			{
-				name:'option1',
-				val:'1',
-				disable:false
-			},
-			{
-				name:'option2',
-				val:'2',
-				disable:false
-			},
-			{
-				name:'option3',
-				val:'3',
-				disable:true
-			},
-//			{
-//				ad:''
-//			}
-		]
-		return selectDatas;
-	}
-	function changeCity(val){
-		alert(1)
-	}
-	function awdawd(val){
-		console.log(val)
 	}
 	//table
 	var onDiaTable = jrytable.create({
@@ -474,159 +357,19 @@
             }]
 	});
 	var tedt = function(){
-		console.log(ontable.getCheck())
+		var s =ontable.getCheck();
+		new jy_alert().alert({
+			width:400,
+			height:200,
+			content:s,
+			hasCloseBtn:true,
+			showMask:true,
+			sucessFn:function(){
+			}
+		});
+		console.log()
 	}
 
-	//menu
-	var menuData=[  //侧滑栏的初始化数据
-		{	
-			labelIcon:"ion-map",
-			label:"分类1",
-			keyClick:"menuClickDemo",
-			children:[{
-				labelIcon:"ion-map",
-				label:"分类1-1",
-				keyClick:"menuClickDemo",
-				children:[{
-					labelIcon:"ion-map",
-					label:"分类1-1-1",
-					keyClick:"menuClickDemo",
-				},{
-					labelIcon:"ion-map",
-					label:"分类1-1-2",
-					keyClick:"menuClickDemo",
-				}]
-			},{
-				labelIcon:"ion-map",
-				label:"分类1-2",
-				keyClick:"menuClickDemo",
-			},{
-				labelIcon:"ion-map",
-				label:"分类1-3",
-				keyClick:"menuClickDemo",
-				children:[{
-					labelIcon:"ion-map",
-					label:"分类1-3-3",
-					keyClick:"menuClickDemo",
-				}]
-			}]
-		},{
-			labelIcon:"ion-map",
-			label:"分类2",
-			keyClick:"menuClickDemo",
-		},{
-			labelIcon:"ion-map",
-			label:"分类3",
-			keyClick:"menuClickDemo1",
-		}
-		]
-		var enw=new JYmenus()
-		function menuOpen(obj){
-			console.log(obj)
-		}
-		//nav
-		var dweda=new JYnavs();
-		function navOut(res){
-			console.log(res)
-		}
-		//tree
-		var treeData=[//树的初使化数据
-		{	
-			id:"00001",
-			label:"一级1",
-			children:[{
-				id:"00011",
-				label:"二级1",
-				children:[{
-					id:"00111",
-					label:"三级1",
-					children:[{
-						id:"01111",
-						label:"四级1",
-					}]
-				}]
-			}]
-		},{
-			id:"00002",
-			label:"一级2",
-			children:[{
-				id:"00021",
-				label:"二级2",
-				children:[{
-					id:"00213",
-					label:"三级3",
-				}]
-			},{
-				id:"00022",
-				label:"二级22",
-				children:[{
-					id:"000221",
-					label:"三级33",
-					children:[{
-						id:"000223",
-						label:"四级4"
-					}]
-				}]
-			},{
-				id:"00223",
-				label:"二级222",
-				children:[{
-					id:"00224",
-					label:"三级333"
-				}]
-			},{
-				id:"002244",
-				label:"二级2222",
-				children:[{
-					id:"002244",
-					label:"三级3333"
-				}]
-			}]
-		}
-		];
-		var enqwew=new JYtrees();
-		function rowClick(id,text,children){  //tree的每条click事件
-			console.log(id);
-			console.log(text);
-			console.log(children)
-		}
-		function rowCode(){	//tree的每条追加方法
-			return (
-				'<div style="width:30px;height:10px;background:green;"></div>'
-				);
-		}
-		//page
-		var pageOptions=[
-		{
-			total:34,
-		},
-		{
-			total:45,
-		},
-		{
-			total:221,
-		},
-		];
-		var NewpagingTotal= 6;
-		var NewsizeOptions=[5,10,20,30];
-		var enw123=new JYpagings()
 
-		function output(pageNum,pageSize){
-			console.log(pageNum);
-			console.log(pageSize);
-		}
-		//date
-		//初始化实例
-		  date_init('jy_date','en','yyyy-MM-dd hh:mm:ss');
-		  date_init('jy_dates','ch','yyyy-MM-dd hh:mm:ss');
-
-		  //取值实例
-		  function getValues(){
-		    console.log('jy_date : '+document.getElementById('jy_date').value);
-		    console.log('jy_dates : '+document.getElementById('jy_dates').value);
-
-		    console.log('jy_date : '+new Date(parseInt(document.getElementById('jy_date').value)));
-		    console.log('jy_dates : '+new Date(parseInt(document.getElementById('jy_dates').value)));
-		  }
 </script>
 </html>
