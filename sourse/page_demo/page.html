@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>page demo</title>
+	<link rel="stylesheet" type="text/css" href="../base_css/base.css" />
+	<link href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/page.css">
+</head>
+<body>
+		<jy:page id="demo1" show-pages="true" show-total="true" name="ceshi1"></jy:page>
+		<br><br><br><br><br><br>
+		<jy:page id="demo2" class="asd" show-pages="true" name="ceshi2"></jy:page>
+		<br><br><br><br><br><br>
+		<jy:page name="ceshi3" show-pages="true" show-total="true"></jy:page>
+	<script src="js/page.js"></script>
+	<script type="text/javascript">
+		var pageOptions=[
+		{
+			total:34,
+		},
+		{
+			total:45,
+		},
+		{
+			total:221,
+		},
+		];
+		var NewpagingTotal= 6;
+		var NewsizeOptions=[5,10,20,30];
+		var enw123=new JYpagings()
+
+		function output(pageNum,pageSize){
+			console.log(pageNum);
+			console.log(pageSize);
+		}
+	</script>
+</body>
+</html>

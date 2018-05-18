@@ -1,0 +1,93 @@
+table{
+	border-collapse: collapse;
+    border-spacing: 0;
+    background-color: transparent;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+table.dataTable {
+    clear: both;
+    max-width: none!important;
+}
+table .table-icon-nomal{
+    font-size: 25px
+}
+.dataTable {
+    margin-bottom: 0;
+}
+.table>thead>tr {
+    color: #707070;
+    font-weight: 400;
+    background: repeat-x #F2F2F2;
+    background-image: -webkit-linear-gradient(top,#f8f8f8 0,#ececec 100%);
+    background-image: -o-linear-gradient(top,#f8f8f8 0,#ececec 100%);
+    background-image: linear-gradient(to bottom,#f8f8f8 0,#ececec 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8', endColorstr='#ffececec', GradientType=0);
+}
+.table-hover table>tbody>tr:hover td{
+    background-color: #F2F2F2
+}
+td, th {
+    padding: 0;
+}
+th {
+    text-align: left;
+}
+.table-bordered, td, th {
+    border-radius: 0!important;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 8px;
+    font-size: 1.2em;
+    text-align: center;/* 
+    line-height: 1.42857143;
+    vertical-align: top; */
+    border-top: 1px solid #ddd;
+}
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+    border: 1px solid #ddd;
+}
+.table-bordered>thead>tr>th, .table-bordered>thead>tr>td {
+    border-bottom-width: 2px;
+}
+.table>thead>tr>th {
+    border-color: #ddd;
+    font-weight: 700;
+}
+table.dataTable th:active {
+    outline: 0;
+}
+.table.table-bordered>thead>tr>th {
+    vertical-align: middle;
+}
+.table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>th, .table>caption+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>td, .table>thead:first-child>tr:first-child>td {
+    border-top: 1px solid #ddd;
+}
+.table.table-bordered>thead>tr>th:first-child {
+    border-left-color: #ddd;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 8px;
+    border-top: 1px solid #ddd;
+}
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+    border: 1px solid #ddd;
+}
+body .jrytable-table .table>tbody>tr>td {
+    vertical-align: middle;
+}
+.notice-table .table.table-bordered>tbody>tr>td:first-child {
+    max-width: 440px;
+}
+.table .tableSet{
+    display: inline-block;
+    cursor: default;
+    padding-right: 20px
+}

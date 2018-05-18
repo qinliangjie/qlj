@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/textarea.css">
+	<link rel="stylesheet" type="text/css" href="../base_css/iconfont.css" />
+	<style type="text/css">
+		.demo{width:1200px;margin:100px auto;min-height: 400px;background: #fff;padding:40px 0}
+	</style>
+</head>
+<body style="background: #e2e2e2">
+	<div class="demo">
+	<jy:textarea id="test1" class="test1" style="color:red" defaultValue="2016-11-14" validate="/^(\d{1,4})(-|\/)(\d{1,2})\2(\d{1,2})/" tips="日期格式错误" name="test1" textarea-size="small" resize="false">
+    </jy:textarea>
+    <jy:textarea id="test2" class="test2" defaultValue="校验是方法返回true或false" validate="set" tips="只能为字母" max-length="20" textarea-size="medium" resize="true">
+    </jy:textarea>
+    <jy:textarea id="test3" class="test3" placeholder="请输入" textarea-size="large" resize="false">
+    </jy:textarea>
+	</div>
+</body>
+<script type="text/javascript">
+	function set(){
+		return true;
+	}
+</script>
+<script src="../base_js/base.js"></script>
+<script src="js/textarea.js"></script>
+
+</html>

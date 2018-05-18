@@ -1,0 +1,188 @@
+.jy-paging{
+    white-space: nowrap;
+    padding: 2px 5px;
+    color: #48576a;
+}
+.jy-paging button.disabled{
+    color: #e4e4e4;
+    background-color: #fff;
+    cursor: not-allowed;
+}
+.jy-paging .btn-prev, .jy-paging .btn-next{
+    background: 50% no-repeat;
+    background-size: 16px;
+    background-color: #fff;
+    border: 1px solid #d1dbe5;
+    cursor: pointer;
+    margin: 0;
+    color: #97a8be;
+}
+.jy-paging .btn-prev{
+    border-radius: 2px 0 0 2px;
+    border-right: 0;
+}
+.jy-paging .btn-next{
+    border-radius: 2px 0 0 2px;
+    border-left: 0;
+}
+.jy-paging button, .jy-paging span{
+    display: inline-block;
+    font-size: 13px;
+    min-width: 28px;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.jy-paging button{
+    border: none;
+    padding: 0 6px;
+    background: transparent;
+}
+.jy-pager, .jy-pager li{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+.jy-pager li{
+    padding: 0 4px;
+    border: 1px solid #d1dbe5;
+    border-right: 0;
+    background: #fff;
+    font-size: 13px;
+    min-width: 28px;
+    height: 28px;
+    line-height: 28px;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+}
+.jy-pager li:hover{
+    color: #20a0ff;
+}
+.jy-pager li:last-child{
+    border-right: 1px solid #d1dbe5;
+}
+.jy-pager .now{
+    color: red;
+}
+.jy-paging .jy-pager-jump{
+    border: 1px solid #d1dbe5;
+    border-radius: 2px;
+    line-height: 18px;
+    padding: 4px 2px;
+    width: 30px;
+    text-align: center;
+    margin: 0 6px;
+    box-sizing: border-box;
+    transition: border .3s;
+    -moz-appearance: textfield;
+}
+.jy-paging input{
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+.jy-paging input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+.jy-paging span{
+    display: inline-block;
+    font-size: 13px;
+    min-width: 28px;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.jy-paging .jy-pager-span{
+    margin-left: 10px;
+}
+.jy-paging .jy-paging-select{
+    width: 110px;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+.jy-paging .jy-paging-select__inner{
+    font-size: 13px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 2px;
+    border: 1px solid #bfcbd9;
+    box-sizing: border-box;
+    color: #1f2d3d;
+    display: inline-block;
+    height: 28px;
+    line-height: 1;
+    outline: none;
+    padding: 3px 10px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
+    padding-right: 25px;
+}
+.jy-paging .jy-paging-select:hover .jy-paging-select__inner{
+    border: 1px solid #1c8de0;
+}
+.jy-paging .jy-input__icon{
+    color: #bfcbd9;
+    font-size: 12px;
+    transition: transform .3s;
+    line-height: 16px;
+    top: 8px;
+    cursor: pointer;
+    position: absolute;
+    width: 35px;
+    height: 100%;
+    right: 0;
+    text-align: center;
+    color: #bfcbd9;
+    transition: all .3s;
+}
+.jy-paging .jy-paging-select__ul ul{
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+.jy-paging .jy-paging-select__ul{
+    position: absolute;
+    z-index: 99;
+    background-color: #fff;
+}
+.jy-paging .jy-paging-li__item{
+    font-size: 14px;
+    padding: 8px 27px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #48576a;
+    height: 36px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 1px solid #D6D6D6;
+}
+.jy-paging .jy-paging-li__item:hover{
+    background-color: #e4e8f1;
+}
+.jy-paging .jy-paging:before{
+    clear:both;
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    visibility:hidden;
+}
+.jy-paging .jy-paging-span{
+    margin-right: 10px;
+    float: left;
+}
+.jy-paging .jy-paging-span1{
+    margin-left: 10px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>page demo</title>
+	<link rel="stylesheet" type="text/css" href="../base_css/base.css" />
+	<link href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="tree.css">
+</head>
+<body>
+    <br><br><br>
+	<jy:tree class="qwe" jy-onlyOne="true" row-click="rowClick" row-code="rowCode" tree-data="treeData"></jy:tree>
+	<script src="tree.js"></script>
+	<script type="text/javascript">
+		var treeData=[//树的初使化数据
+		{	
+			id:"00001",
+			label:"一级1",
+			children:[{
+				id:"00011",
+				label:"二级1",
+				children:[{
+					id:"00111",
+					label:"三级1",
+					children:[{
+						id:"01111",
+						label:"四级1",
+					}]
+				}]
+			}]
+		},{
+			id:"00002",
+			label:"一级2",
+			children:[{
+				id:"00021",
+				label:"二级2",
+				children:[{
+					id:"00213",
+					label:"三级3",
+				}]
+			},{
+				id:"00022",
+				label:"二级22",
+				children:[{
+					id:"000221",
+					label:"三级33",
+					children:[{
+						id:"000223",
+						label:"四级4"
+					}]
+				}]
+			},{
+				id:"00223",
+				label:"二级222",
+				children:[{
+					id:"00224",
+					label:"三级333"
+				}]
+			},{
+				id:"002244",
+				label:"二级2222",
+				children:[{
+					id:"002244",
+					label:"三级3333"
+				}]
+			}]
+		}
+		];
+		var enqwew=new JYtrees();
+		function rowClick(id,text,children){  //tree的每条click事件
+			console.log(id);
+			console.log(text);
+			console.log(children)
+		}
+		function rowCode(){	//tree的每条追加方法
+			return (
+				'<div style="width:30px;height:10px;background:green;"></div>'
+				);
+		}
+	</script>
+</body>
+</html>

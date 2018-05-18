@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jytable</title>
+	<link rel="stylesheet" type="text/css" href="css/table.css">
+	<link rel="stylesheet" type="text/css" href="../base_css/base.css" />
+	<link rel="stylesheet" type="text/css" href="../base_css/iconfont.css" />
+	<style type="text/css">
+		.w80{
+			width: 80px
+		}
+	</style>
+</head>
+<body style="background: #e2e2e2">
+	<div class="table-hover" style="width: 1200px;margin: auto;background-color: white" id="tablecontainer"></div>
+	<button onclick="tedt()">打印选择项</button>
+</body>
+
+<script src="../base_js/base.js"></script>
+<script src="js/table.js"></script>
+<script type="text/javascript">
+	var ontable = jrytable.create({
+		batchable:true,
+		container:"tablecontainer",
+		data:[{
+	        "id": "0",
+	        "order": "升序",
+	        "title": "双十一促销",
+	        "type": "苏州金瑞阳",
+	        "time": "2016-03-14  13:59:15"
+	    },{
+	        "id": "1",
+	        "order": "升序",
+	        "title": "双十二促销",
+	        "type": "苏州中心",
+	        "time": "2016-03-14  13:55:15"
+	    }, {
+	        "id": "2",
+	        "order": "升序",
+	        "title": "双十三促销",
+	        "type": "苏州乐园",
+	        "time": "2016-03-14  13:12:15"
+
+	    }],
+		cols: [{
+                alias: '公告标题',
+                name: 'title',
+                display: function(value,item) {
+                    value =value;
+                    return value;
+                }
+            },
+            {
+                alias: '类别',
+                name: 'type',
+                display: function(value,item) {
+                    value =value;
+                    return value;
+                }
+            },
+            {
+                alias: '推送时间',
+                name: 'time',
+                display: function(value,item) {
+                    value =value;
+                    return value;
+                }
+            }
+        ],
+         operations: [
+            {
+                name: '<i class="icon iconfont icon-bianji table-icon-nomal"></i>',
+                todo: function(rowData) {
+                    console.log(rowData);
+                }
+            },
+            {
+                name: '<i class="icon iconfont icon-shanchu table-icon-nomal"></i>',
+                todo: function(rowData) {
+                    console.log(rowData);
+                }
+            }]
+	});
+	var tedt = function(){
+		console.log(ontable.getCheck())
+	}
+</script>
+</html>
+

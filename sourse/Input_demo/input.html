@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jy:input</title>
+	<link rel="stylesheet" type="text/css" href="../base_css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/input.css">
+	<style type="text/css">
+		.demo{background: #fff;}
+	</style>
+</head>
+<body style="background: #e2e2e2">
+	<div class="demo">
+		<div style="width: 300px"><jy:input require="true" tips="测试1" validate="/^[a-zA-Z]+$/" type="password" class="demo" id="popi1"></jy:input></div>
+		<div style="width: 300px"><jy:input showpassword="true" require="true" tips="测试1" validate="/^[a-zA-Z]+$/" type="password" class="demo" id="popi8"></jy:input></div>
+		<div style="width: 300px"><jy:input require="true" tips="测试2" validate="what" label="测试" name="mnb" class="demo"></jy:input></div>
+		<div style="width: 300px"><jy:input disable="false" placeholder="lkjk" id="popi3"></jy:input></div>
+	</div>
+</body>
+<script type="text/javascript" src="js/input.js"></script>
+</html>

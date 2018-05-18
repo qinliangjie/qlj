@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>page demo</title>
+	<link rel="stylesheet" type="text/css" href="../base_css/base.css" />
+	<link href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="menu.css">
+</head>
+<body>
+        <br><br><br><br><br><br>
+        <jy:menu menu-data="menuData" class="demo" id="name" menu-open="menuOpen"></jy:menu>
+	<script src="menu.js"></script>
+	<script type="text/javascript">
+		var menuData=[  //侧滑栏的初始化数据
+		{	
+			labelIcon:"ion-map",
+			label:"分类1",
+			keyClick:"menuClickDemo",
+			children:[{
+				labelIcon:"ion-map",
+				label:"分类1-1",
+				keyClick:"menuClickDemo",
+				children:[{
+					labelIcon:"ion-map",
+					label:"分类1-1-1",
+					keyClick:"menuClickDemo",
+				},{
+					labelIcon:"ion-map",
+					label:"分类1-1-2",
+					keyClick:"menuClickDemo",
+				}]
+			},{
+				labelIcon:"ion-map",
+				label:"分类1-2",
+				keyClick:"menuClickDemo",
+			},{
+				labelIcon:"ion-map",
+				label:"分类1-3",
+				keyClick:"menuClickDemo",
+				children:[{
+					labelIcon:"ion-map",
+					label:"分类1-3-3",
+					keyClick:"menuClickDemo",
+				}]
+			}]
+		},{
+			labelIcon:"ion-map",
+			label:"分类2",
+			keyClick:"menuClickDemo",
+		},{
+			labelIcon:"ion-map",
+			label:"分类3",
+			keyClick:"menuClickDemo1",
+		}
+		]
+		var enw=new JYmenus()
+		function menuOpen(obj){
+			console.log(obj)
+		}
+	</script>
+</body>
+</html>

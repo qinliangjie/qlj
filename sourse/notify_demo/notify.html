@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jyNotify</title>
+	<link rel="stylesheet" type="text/css" href="css/jy_notify.css">
+	<link rel="stylesheet" type="text/css" href="../base_css/base.css" />
+	<link rel="stylesheet" type="text/css" href="../base_css/iconfont.css" />
+	<style type="text/css">
+		
+	</style>
+</head>
+<body style="background: #e2e2e2">
+	<input type="button" value="成功且自动关闭"  onclick="jyNotify1()">
+	<input type="button" value="消息且不自动关闭"  onclick="jyNotify2()">
+	<input type="button" value="警告且自动关闭"  onclick="jyNotify3()">
+	<input type="button" value="错误且不自动关闭"  onclick="jyNotify4()">
+</body>
+
+<script src="../base_js/base.js"></script>
+<script src="js/notify.js"></script>
+<script type="text/javascript">
+	function jyNotify1(){
+		new jy_notify().notify({
+			width:400,
+			height:100,
+			title:'成功',
+			autoClose:true,
+			closeTime:5000,
+			type:'success',
+			content:'这是成功且五秒后自动关闭'
+		});
+	}
+	function jyNotify2(){
+		new jy_notify().notify({
+			width:400,
+			height:100,
+			title:'消息',
+			autoClose:false,
+			type:"info",
+			content:'这是新消息,不会自动关闭'
+		});
+	}
+	function jyNotify3(){
+		new jy_notify().notify({
+			width:400,
+			height:100,
+			title:"警告",
+			autoClose:true,
+			closeTime:10000,
+			type:"warning",
+			content:'这个是警告内容,10秒后自动关闭'
+		});
+	}
+	function jyNotify4(){
+		new jy_notify().notify({
+			width:400,
+			height:100,
+			title:"错误",
+			autoClose:false,
+			type:"error",
+			content:'这个是错误内容，不会自动关闭'
+		});
+	}
+</script>
+</html>

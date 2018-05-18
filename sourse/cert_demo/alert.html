@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jy弹出层</title>
+	<link rel="stylesheet" type="text/css" href="css/jy_alert.css">
+	<link rel="stylesheet" type="text/css" href="../base_css/iconfont.css" />
+	<style type="text/css">
+		
+	</style>
+</head>
+<body style="background: #e2e2e2">
+	<input type="button" value="弹窗" id="testAlert" onclick="textAL()">
+	
+</body>
+
+<script src="../base_js/base.js"></script>
+<script src="js/alert.js"></script>
+<script type="text/javascript">
+	function textAL(){
+		new jy_alert().alert({
+			width:400,
+			height:200,
+			content:'这个是测试的内容,这个是测试的内容,这个是测试的内容,这个是测试的内容,这个是测试的内容',
+			hasCloseBtn:true,
+			showMask:true,
+			sucessFn:function(){
+
+			}
+		});
+	}
+</script>
+</html>

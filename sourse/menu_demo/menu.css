@@ -1,0 +1,60 @@
+ul,li,dl,dd,dt,p,ol,h1,h2,h3,h4,h5{font-size: 16px;font-weight: 100;padding: 0;margin: 0;}
+	ul li{
+		list-style-type:none;
+	}
+.jy-menu{
+    overflow: hidden;
+    width: 300px;
+    background: #545C64;
+}
+.jy-menu .jy-menu-node{
+    display: block;
+    clear: both;
+}
+.jy-menu .jy-menu-conment{
+    padding: 10px 0;
+}
+.jy-menu .jy-menu-conmentChild{
+    padding: 10px 0;
+}
+.jy-menu .jy-menu-conment:hover{
+    background:#434A50;
+}
+.jy-menu .jy-menu-conmentChild:hover{
+    background:#434A50;	
+}
+.jy-menu .jy-menu-conment p{
+    color: #fff;
+}
+.jy-menu .jy-menu-conment .IconLast{
+    float: right;
+    margin-top: -20px;
+    margin-right: 20px;
+    color: #fff;
+}
+.jy-menu .jy-menu-conment .IconFirst{
+    float: left;
+    margin-right: 5px;
+}
+.jy-menu .jy-menu-nodeChild{
+    clear: both;
+}
+.jy-menu .jy-menu-conmentChild p{
+    color: #fff;
+}
+.jy-menu .jy-menu-conmentChild .IconLast{
+    float: right;
+    margin-top: -20px;
+    margin-right: 20px;
+    color: #fff;
+}
+.jy-menu .jy-menu-conmentChild .IconFirst{
+    float: left;
+    margin-right: 5px;
+}
+.jy-menu .jy-menu-nodeChildHides{
+    display: none;
+}
+.jy-menu .jy-menu-conmentIRotate{
+    transform: rotate(90deg);
+}

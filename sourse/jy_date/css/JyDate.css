@@ -1,0 +1,140 @@
+body{
+	box-sizing: border-box;
+	background: #fafafa;
+}
+
+.clearfix{*zoom:1;}
+.clearfix:after{display:table; content:''; clear:both;}
+.fl{
+	float: left;
+}
+.ac{
+	text-align: center;
+}
+.al{
+	text-align: left;
+}
+.ar{
+	text-align: right;
+}
+
+.jy_date_div{
+	width:300px;
+	height:40px;
+	line-height: 40px;
+	color:#909090;
+	text-align:center;
+	background: #fff;
+	border:1px #f1f1f1 solid;
+	border-radius: 4px;
+}
+.jy_date{
+	color:#666;
+	width:280px;
+	background: #fff;
+	border:1px #e4e4e4 solid;
+	border-radius: 8px;
+	z-index: 999;
+}
+.jy_date .jy_date_top{
+	width: 100%;
+	height:30px;
+	line-height: 30px;
+	border-bottom: 1px #e4e4e4 solid;
+}
+.jy_date .jy_date_top .fl{
+	width:50%;
+	text-align: center;;
+}
+
+.jy_date .jy_date_days{
+
+}
+.jy_date .jy_date_days .jy_days_top .days_top_item{
+	width: 40px;
+	height:30px;
+	line-height: 30px;
+}
+.jy_date .jy_date_days .jy_date_days_items{
+	width: 40px;
+	height:40px;
+	line-height: 40px;
+	border-radius: 50%;
+}
+.jy_date .jy_date_days .jy_date_days_items.forbid{
+	color: #dedede!important;
+	background: #fff!important;
+}
+.jy_date .jy_date_days .jy_date_days_items.active{
+	color:#fff!important;
+	background: #f40!important;
+}
+.jy_date .jy_date_days .jy_date_days_items:hover{
+	background: #d6d6d6;
+}
+
+.jy_date .jy_date_year{
+	margin:10px 5px;
+
+}
+.jy_date .jy_date_year .jy_date_year_items{
+	width:54px;
+	height:40px;
+	border-radius: 2px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 40px;
+}
+.jy_date .jy_date_year .jy_date_year_items:hover{
+	background: #d6d6d6;
+}
+.jy_date .jy_date_year .jy_date_year_items.active{
+	background: #f40!important;
+	color:#fff!important;
+}
+.jy_date .jy_date_year .jy_date_year_back{
+	width:54px;
+	height:40px;
+	border-radius: 2px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 40px;
+}
+
+.jy_date .jy_date_month{	margin:10px 5px;}
+.jy_date .jy_date_month .jy_date_month_items{
+	width:54px;
+	height:40px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 2px;
+	line-height: 40px;
+}
+.jy_date .jy_date_month .jy_date_month_items:hover{
+	background: #d6d6d6;
+}
+.jy_date .jy_date_month .jy_date_month_items.active{
+	background: #f40!important;
+	color:#fff!important;
+}
+.jy_date .jy_date_month .jy_date_month_back{
+	width:54px;
+	height:40px;
+	border-radius: 2px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 40px;
+}
+
+.jy_date .jy_date_time{	margin:10px 5px;}
+.jy_date .jy_date_time div{
+	width:54px;
+	height:40px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 2px;
+	line-height: 40px;
+}
+.jy_date .jy_date_time div:hover{
+	background: #d6d6d6;
+}

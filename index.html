@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>金瑞阳组件库</title>
+	<link rel="stylesheet" type="text/css" href="dest/css/main.css">
+	<link rel="stylesheet" type="text/css" href="dest/base_css/base.css" />
+	<link rel="stylesheet" type="text/css" href="dest/base_css/iconfont.css" />
+	<style type="text/css">
+		.all_Container{
+			width: 1200px;
+			background-color: white;
+			margin:20px auto;
+		}
+		.container{
+			padding:30px;
+		}
+		.container h2{
+			font-size: 24px;
+		    color: black;
+		    margin-bottom: 20px;
+		}
+		.demoitem{
+			cursor: default;
+		}
+		.getValues{
+		    width:300px;
+		    height:40px;
+		    line-height: 40px;
+		    background: #f40;
+		    color: #fff;
+		    cursor: pointer;
+		    text-align: center;
+		    margin: 100px auto;
+		    border-radius: 4px;
+		}
+	</style>
+</head>
+<body style="background: #e2e2e2">
+	<div class="all_Container">
+		<div class="container" id="notify">
+			<h2>notify组件</h2>
+			<div class="demo_item">
+				<jy:button class="test" value="成功且自动关闭" onclick="jyNotify1()">
+			    </jy:button>
+				<jy:button class="test" value="消息且不自动关闭" onclick="jyNotify2()">
+			    </jy:button>
+			    <jy:button class="test" value="警告且自动关闭" onclick="jyNotify3()">
+			    </jy:button>
+			    <jy:button class="test" value="错误且不自动关闭" onclick="jyNotify4()">
+			    </jy:button>
+			</div>
+		</div>
+		<div class="container">
+			<h2>bottom组件</h2>
+			<div class="demo_item">
+				<jy:button class="test" id="test1" button-size="large" value="点击事件" onclick="alert(1)">
+			    </jy:button>
+			    <jy:button class="test"  value="中中中">
+			    </jy:button>
+			    <jy:button class="test" button-size="small" value="小小小">
+			    </jy:button>
+			    <jy:button class="test" button-size="large" value='大大大'> 
+			    </jy:button>
+			    <jy:button class="test" button-size="large" button-type="primary" value='primary'> 
+			    </jy:button>
+			    <jy:button class="test" button-size="large" button-type="warning" value='warning'> 
+			    </jy:button>
+			    <jy:button class="test" button-size="large" button-type="success" value='success'> 
+			    </jy:button>
+			    <jy:button class="test" button-size="large" button-type="danger" value='danger'> 
+			    </jy:button> 
+			</div>
+		</div>
+		<div class="container" >
+			<h2>dialog组件</h2>
+			<div class="demo_item">
+				<jy:button jy-modal='testV' class="test" value="试一下">
+			    </jy:button>
+			    <jy:button jy-modal='testS' class="test" value="试两下">
+			    </jy:button>
+			    <jy:button onclick="testfun()" class="test" value="试三下">
+			    </jy:button>
+			</div>
+		</div>
+		<div class="container" >
+			<h2>table组件</h2>
+			<div class="demo_item">
+				<div class="table-hover" style="margin: auto;background-color: white" id="tablecontainer"></div>
+				<jy:button onclick="tedt()" class="test" style="margin-top:20px" value="打印选择项">
+			    </jy:button>
+			</div>
+		</div>
+		<div class="container" >
+			<h2>page组件</h2>
+			<div class="demo_item">
+				<jy:page id="demo1" show-pages="true" show-total="true" name="ceshi1"></jy:page>
+				<br>
+				<jy:page id="demo2" class="asd" show-pages="true" name="ceshi2"></jy:page>
+				<br>
+				<jy:page name="ceshi3" show-pages="true" show-total="true"></jy:page>
+			</div>
+		</div>
+		<div class="container" >
+			<h2>alert组件</h2>
+			<div class="demo_item">
+				<jy:button class="test" onclick="textAL()" value="弹窗">
+			    </jy:button>
+			</div>
+		</div>
+		<div class="container" >
+			<h2>input组件</h2>
+			<div class="demo_item">
+				<div style="width: 300px"><jy:input require="true" tips="测试1" validate="/^[a-zA-Z]+$/" type="password" class="demo" id="popi1"></jy:input></div>
+				<div style="width: 300px"><jy:input showpassword="true" require="true" tips="测试1" validate="/^[a-zA-Z]+$/" type="password" class="demo" id="popi8"></jy:input></div>
+				<div style="width: 300px"><jy:input require="true" tips="测试2" validate="what" label="测试" name="mnb" class="demo"></jy:input></div>
+				<div style="width: 300px"><jy:input disable="false" placeholder="lkjk" id="popi3"></jy:input></div>
+			</div>
+		</div>
+		<div class="container" >
+			<h2>textarea组件</h2>
+			<div class="demo_item">
+				<jy:textarea id="test1" class="test1" style="color:red" defaultValue="2016-11-14" validate="/^(\d{1,4})(-|\/)(\d{1,2})\2(\d{1,2})/" tips="日期格式错误" name="test1" textarea-size="small" resize="false">
+			    </jy:textarea>
+			    <jy:textarea id="test2" class="test2" defaultValue="校验是方法返回true或false" validate="textareaFn" tips="只能为字母" max-length="20" textarea-size="medium" resize="true">
+			    </jy:textarea>
+			    <jy:textarea id="test3" class="test3" placeholder="请输入" textarea-size="large" resize="false">
+			    </jy:textarea>
+			</div>
+		</div>
+		<div class="container" >
+			<h2>select组件</h2>
+			<div class="demo_item">
+				<div style="width:50%;float: left;text-align: center;">
+					<div style="text-align: center;height:40px;line-height: 40px;">一行显示</div>
+					<jy:select options="getOption" id="selectCity" changes='awdawd' name="selecCity" value="2" label='选择地区' label-style='inline'></jy:select>
+				</div>
+				<div style="width:50%;float: left;">
+					<div style="text-align: center;height:40px;line-height: 40px;">两行显示</div>
+					<jy:select options="selectData" id="selectCitys" changes='changeCity' name="selecCitys" value="4" label='选择地区2' label-style='noline'></jy:select>
+				</div>
+			</div>
+		</div>
+		<div class="container" >
+			<h2>menu组件</h2>
+			<div class="demo_item">
+				<jy:menu menu-data="menuData" class="demo" id="name" menu-open="menuOpen"></jy:menu>
+			</div>
+		</div>
+		<div class="container">
+			<h2>nav组件</h2>
+			<div class="demo_item">
+				<jy:nav class="demo123" id="weq">
+			        <jy:nav-title data-to="/qwe"><p>题目一</p></jy:nav-title>
+			        <jy:nav-title><p>题目二</p><jy:nav-title-item data-to="/qwe1">demo1</jy:nav-title-item><jy:nav-title-item data-to="/qwe2">demo2</jy:nav-title-item><jy:nav-title-item data-to="/qwe3">demo3</jy:nav-title-item></jy:nav-title>
+			        <jy:nav-title data-to="/qwe4"><p>题目三</p><jy:nav-title-item data-to="/qwe1">demo1</jy:nav-title-item><jy:nav-title-item data-to="/qwe2">demo2</jy:nav-title-item><jy:nav-title-item data-to="/qwe3">demo3</jy:nav-title-item></jy:nav-title>
+			    </jy:nav>
+			</div>
+		</div>
+		<div class="container" >
+			<h2>tree组件</h2>
+			<div class="demo_item">
+				<jy:tree class="qwe" jy-onlyOne="true" row-click="rowClick" row-code="rowCode" tree-data="treeData"></jy:tree>
+			</div>
+		</div>
+		<div class="container" >
+			<h2>tips组件</h2>
+			<div class="demo_item">
+				<jy:tips content="Top  提示文字" placement="top">
+					<div class="demoitem">tips在上面显示</div>
+				</jy:tips>
+				<jy:tips content="Left 提示文字" placement="left">
+					<div class="demoitem">tips在左边显示</div>
+				</jy:tips>
+				<jy:tips content="Right 提示文字" placement="right">
+					<div class="demoitem" style="width: 115px">tips在右边显示</div>
+				</jy:tips>
+				<jy:tips content="Bottom 提示文xiamian字" placement="bottom">
+					<span class="demoitem">tips在下边xiamian显示</span>
+				</jy:tips>
+			</div>
+		</div>
+		<div class="container" >
+			<h2>date组件</h2>
+			<div id="jy_date" class="jy_date_div"></div>
+			<div id="jy_dates" class="jy_date_div" style="margin-top:200px"></div>
+			<div class="getValues" onclick="getValues()">取值</div>
+		</div>
+	</div>
+	<jy-dialog width="30%" id='testV' close-on-click-mask>
+		<div class="jyDiaConter">
+			<div class="jyDiaHeader">
+				sdfsadfasdf
+				<i class="icon iconfont icon-close alertclose" jy-modal-cancel></i>
+			</div>
+			<div class="jyDiaBody">
+				<div class="table-hover" style="margin: auto;background-color: white" id="tableDia"></div>
+			</div>
+			<div class="jyDiafooter">
+				<div class="jyDiaBtn jyBtnOk" >确定</div>
+				<div class="jyDiaBtn jyBtncancel"  jy-modal-cancel>取消</div>
+			</div>
+		</div>
+	</jy-dialog>
+	<jy-dialog width="30%" id='testS'>
+		<div class="jyDiaConter">
+			<div class="jyDiaHeader">
+				1123
+				<i class="icon iconfont icon-close alertclose" jy-modal-cancel ></i>
+			</div>
+			<div class="jyDiaBody">
+				
+			</div>
+			<div class="jyDiafooter">
+				
+			</div>
+		</div>
+	</jy-dialog>
+</body>
+<script type="text/javascript">
+
+</script>
+<script src="dest/js/main.js"></script>
+<script type="text/javascript">
+	var textareaFn  = function(){
+		return true
+	}
+	function jyNotify1(){
+		new jy_notify().notify({
+			width:400,
+			height:100,
+			title:'成功',
+			autoClose:true,
+			closeTime:5000,
+			type:'success',
+			content:'这是成功且五秒后自动关闭'
+		});
+	}
+	function jyNotify2(){
+		new jy_notify().notify({
+			width:400,
+			height:100,
+			title:'消息',
+			autoClose:false,
+			type:"info",
+			content:'这是新消息,不会自动关闭'
+		});
+	}
+	function jyNotify3(){
+		new jy_notify().notify({
+			width:400,
+			height:100,
+			title:"警告",
+			autoClose:true,
+			closeTime:10000,
+			type:"warning",
+			content:'这个是警告内容,10秒后自动关闭'
+		});
+	}
+	function jyNotify4(){
+		new jy_notify().notify({
+			width:400,
+			height:100,
+			title:"错误",
+			autoClose:false,
+			type:"error",
+			content:'这个是错误内容，不会自动关闭'
+		});
+	}
+	function textAL(){
+		new jy_alert().alert({
+			width:400,
+			height:200,
+			content:'这个是测试的内容,这个是测试的内容,这个是测试的内容,这个是测试的内容,这个是测试的内容',
+			hasCloseBtn:true,
+			showMask:true,
+			sucessFn:function(){
+				console.log(23232)
+			}
+		});
+	}
+	function testfun(){
+		document.getElementById('testS').show();
+	}
+	//select
+		selectData = [
+		{
+				name:'option4',
+				val:'4',
+				disable:false
+			},
+			{
+				name:'option5',
+				val:'5',
+				disable:false
+			},
+			{
+				name:'option6',
+				val:'6',
+				disable:true
+			},
+			{
+				name:'option6',
+				val:'6',
+				disable:true
+			},
+			{
+				name:'option6',
+				val:'6',
+				disable:true
+			},
+	]
+	function getOption(){
+		var selectDatas = [
+			{
+				name:'option1',
+				val:'1',
+				disable:false
+			},
+			{
+				name:'option2',
+				val:'2',
+				disable:false
+			},
+			{
+				name:'option3',
+				val:'3',
+				disable:true
+			},
+//			{
+//				ad:''
+//			}
+		]
+		return selectDatas;
+	}
+	function changeCity(val){
+		alert(1)
+	}
+	function awdawd(val){
+		console.log(val)
+	}
+	//table
+	var onDiaTable = jrytable.create({
+		batchable:true,
+		container:"tableDia",
+		data:[{
+	        "id": "0",
+	        "title": "十月一号",
+	        "type": "苏州金瑞阳",
+	        "sexy":'女',
+	        "time": "2016-03-14  13:59:15"
+	    },{
+	        "id": "1",
+	        "title": "十月二号",
+	        "type": "苏州中心",
+	        "sexy":'男',
+	        "time": "2016-03-14  13:55:15"
+	    }, {
+	        "id": "2",
+	        "title": "十月三号",
+	        "type": "苏州乐园",
+	        "sexy":'男',
+	        "time": "2016-03-14  13:12:15"
+
+	    }],
+		cols: [{
+                alias: '公告标题',
+                name: 'title',
+                display: function(value,item) {
+                    value =value;
+                    return value;
+                }
+            },
+            {
+                alias: '类别',
+                name: 'type',
+                display: function(value,item) {
+                    value =value;
+                    return value;
+                }
+            },
+            {
+                alias: '性别',
+                name: 'sexy',
+                display: function(value,item) {
+                    value =value;
+                    return value;
+                }
+            },
+            {
+                alias: '推送时间',
+                name: 'time',
+                display: function(value,item) {
+                    value =value;
+                    return value;
+                }
+            }
+        ],
+         operations: [
+            {
+                name: '<i class="icon iconfont icon-bianji table-icon-nomal"></i>',
+                todo: function(rowData) {
+                    console.log(rowData);
+                }
+            },
+            {
+                name: '<i class="icon iconfont icon-shanchu table-icon-nomal"></i>',
+                todo: function(rowData) {
+                    console.log(rowData);
+                }
+            }]
+	});
+	var ontable = jrytable.create({
+		batchable:true,
+		container:"tablecontainer",
+		data:[{
+	        "id": "0",
+	        "order": "升序",
+	        "title": "双十一促销",
+	        "type": "苏州金瑞阳",
+	        "time": "2016-03-14  13:59:15"
+	    },{
+	        "id": "1",
+	        "order": "升序",
+	        "title": "双十二促销",
+	        "type": "苏州中心",
+	        "time": "2016-03-14  13:55:15"
+	    }, {
+	        "id": "2",
+	        "order": "升序",
+	        "title": "双十三促销",
+	        "type": "苏州乐园",
+	        "time": "2016-03-14  13:12:15"
+
+	    }],
+		cols: [{
+                alias: '公告标题',
+                name: 'title',
+                display: function(value,item) {
+                    value =value;
+                    return value;
+                }
+            },
+            {
+                alias: '类别',
+                name: 'type',
+                display: function(value,item) {
+                    value =value;
+                    return value;
+                }
+            },
+            {
+                alias: '推送时间',
+                name: 'time',
+                display: function(value,item) {
+                    value =value;
+                    return value;
+                }
+            }
+        ],
+         operations: [
+            {
+                name: '<i class="icon iconfont icon-bianji table-icon-nomal"></i>',
+                todo: function(rowData) {
+                    console.log(rowData);
+                }
+            },
+            {
+                name: '<i class="icon iconfont icon-shanchu table-icon-nomal"></i>',
+                todo: function(rowData) {
+                    console.log(rowData);
+                }
+            }]
+	});
+	var tedt = function(){
+		console.log(ontable.getCheck())
+	}
+
+	//menu
+	var menuData=[  //侧滑栏的初始化数据
+		{	
+			labelIcon:"ion-map",
+			label:"分类1",
+			keyClick:"menuClickDemo",
+			children:[{
+				labelIcon:"ion-map",
+				label:"分类1-1",
+				keyClick:"menuClickDemo",
+				children:[{
+					labelIcon:"ion-map",
+					label:"分类1-1-1",
+					keyClick:"menuClickDemo",
+				},{
+					labelIcon:"ion-map",
+					label:"分类1-1-2",
+					keyClick:"menuClickDemo",
+				}]
+			},{
+				labelIcon:"ion-map",
+				label:"分类1-2",
+				keyClick:"menuClickDemo",
+			},{
+				labelIcon:"ion-map",
+				label:"分类1-3",
+				keyClick:"menuClickDemo",
+				children:[{
+					labelIcon:"ion-map",
+					label:"分类1-3-3",
+					keyClick:"menuClickDemo",
+				}]
+			}]
+		},{
+			labelIcon:"ion-map",
+			label:"分类2",
+			keyClick:"menuClickDemo",
+		},{
+			labelIcon:"ion-map",
+			label:"分类3",
+			keyClick:"menuClickDemo1",
+		}
+		]
+		var enw=new JYmenus()
+		function menuOpen(obj){
+			console.log(obj)
+		}
+		//nav
+		var dweda=new JYnavs();
+		function navOut(res){
+			console.log(res)
+		}
+		//tree
+		var treeData=[//树的初使化数据
+		{	
+			id:"00001",
+			label:"一级1",
+			children:[{
+				id:"00011",
+				label:"二级1",
+				children:[{
+					id:"00111",
+					label:"三级1",
+					children:[{
+						id:"01111",
+						label:"四级1",
+					}]
+				}]
+			}]
+		},{
+			id:"00002",
+			label:"一级2",
+			children:[{
+				id:"00021",
+				label:"二级2",
+				children:[{
+					id:"00213",
+					label:"三级3",
+				}]
+			},{
+				id:"00022",
+				label:"二级22",
+				children:[{
+					id:"000221",
+					label:"三级33",
+					children:[{
+						id:"000223",
+						label:"四级4"
+					}]
+				}]
+			},{
+				id:"00223",
+				label:"二级222",
+				children:[{
+					id:"00224",
+					label:"三级333"
+				}]
+			},{
+				id:"002244",
+				label:"二级2222",
+				children:[{
+					id:"002244",
+					label:"三级3333"
+				}]
+			}]
+		}
+		];
+		var enqwew=new JYtrees();
+		function rowClick(id,text,children){  //tree的每条click事件
+			console.log(id);
+			console.log(text);
+			console.log(children)
+		}
+		function rowCode(){	//tree的每条追加方法
+			return (
+				'<div style="width:30px;height:10px;background:green;"></div>'
+				);
+		}
+		//page
+		var pageOptions=[
+		{
+			total:34,
+		},
+		{
+			total:45,
+		},
+		{
+			total:221,
+		},
+		];
+		var NewpagingTotal= 6;
+		var NewsizeOptions=[5,10,20,30];
+		var enw123=new JYpagings()
+
+		function output(pageNum,pageSize){
+			console.log(pageNum);
+			console.log(pageSize);
+		}
+		//date
+		//初始化实例
+		  date_init('jy_date','en','yyyy-MM-dd hh:mm:ss');
+		  date_init('jy_dates','ch','yyyy-MM-dd hh:mm:ss');
+
+		  //取值实例
+		  function getValues(){
+		    console.log('jy_date : '+document.getElementById('jy_date').value);
+		    console.log('jy_dates : '+document.getElementById('jy_dates').value);
+
+		    console.log('jy_date : '+new Date(parseInt(document.getElementById('jy_date').value)));
+		    console.log('jy_dates : '+new Date(parseInt(document.getElementById('jy_dates').value)));
+		  }
+</script>
+</html>

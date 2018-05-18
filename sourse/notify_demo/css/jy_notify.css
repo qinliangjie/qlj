@@ -1,0 +1,55 @@
+.allbox::before, .allbox::after {
+    content:"";
+    display:table;
+}
+.allbox::after {
+    clear:both;
+}
+.allbox{
+    position: absolute;
+    right: 10px;
+	min-height: 100px;
+}
+.jy_notifyBox{
+	float: left;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 1px solid #e6ebf5;
+    background-color: #fff;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    transition: opacity .3s,transform .3s,left .3s,right .3s,top .4s,bottom .3s;
+    overflow: hidden;
+}
+.jy_notifyTitle{
+	font-weight: 700;
+    font-size: 16px;
+    color: #2d2f33;
+    margin: 0;
+    padding: 14px 14px 10px 14px;
+}
+.jy_notifyContent{
+	padding: 0px 14px 14px 14px;
+    font-size: 14px;
+}
+.notifyclose{
+	font-size: 40px;
+	float: right;
+}
+.notifySuccess,.notifyWarning,.notifyInfo,.notifyError{
+    font-size: 24px!important;
+    float: left;
+    margin-right: 10px;
+}
+.notifySuccess{
+    color:#67c23a;
+}
+.notifyWarning{
+    color:#eb9e05
+}
+.notifyInfo{
+    color:#409eff
+}
+.notifyError{
+    color: #fa5555
+}

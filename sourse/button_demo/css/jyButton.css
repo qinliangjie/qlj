@@ -1,0 +1,76 @@
+.jy-button {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #bfcbd9;
+    border-color: #c4c4c4;
+    color: #1f2d3d;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.jy-button:active {
+    color: #1d90e6;
+    border-color: #1d90e6;
+    outline: none;
+}
+.jy-button:focus, .jy-button:hover {
+    color: #20a0ff;
+    border-color: #20a0ff;
+}
+.jy-button.jy-button--large {
+    padding: 11px 19px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.jy-button.jy-button--small {
+    padding: 7px 9px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.jy-button.btnprimary{
+    border:0;
+    color: white;
+    background-color: #337ab7
+}
+.btnprimary:hover, .btnprimary:focus{
+    color: white !important;
+    background-color: #2e6da4
+}
+.jy-button.btnwarning{
+    border:0;
+    color: white;
+    background-color: #ec971f
+}
+.btnwarning:hover,.btnwarning:focus{
+    color: white !important;
+    background-color: #d58512
+}
+.jy-button.btndanger{
+    border:0;
+    color: white;
+    background-color: #d9534f
+}
+.btndanger:hover,.btndanger:focus{
+    color: white !important;
+    background-color: #d43f3a
+}
+.jy-button.btnsuccess{
+    border:0;
+    color: white;
+    background-color: #5cb85c
+}
+.btnsuccess:hover,.btnsuccess:focus{
+    background-color: #4cae4c;
+    color: white !important;
+}

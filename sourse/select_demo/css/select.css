@@ -1,0 +1,87 @@
+.jy_select{
+	width:300px;
+	line-height: 40px;
+	font-family: "\u5FAE\u8F6F\u96C5\u9ED1"!important;
+	position: relative;
+	margin:auto;
+}
+.jy_select.select_inline:after{
+	content:".";display:block;height:0;clear:both;visibility:hidden
+}
+.jy_select.select_inline .select_label{
+	float:left;
+	width:120px;
+	text-align: right;
+	padding-left:0px;
+}
+.jy_select.select_inline .select_input{
+	float:left;
+	width:170px;
+	position: relative;
+	margin-left:10px;
+}
+.jy_select .select_label{
+	width:180px;
+	padding-left:20px;
+}
+.jy_select .select_input{
+	width:200px;
+	position: relative;
+	margin-left:20px;
+}
+.jy_select .select_input input{
+	width:100%;
+	height:36px;
+	line-height:36px;
+	padding:0px 5px 0px 5px;
+	font-size:16px;
+    outline: none;
+    box-shadow: none;
+    border-radius: 4px;
+    background-image: none;  
+    border: 1px solid #969696;
+    box-sizing: border-box;
+}
+.jy_select .select_input input:hover{
+	border-color:#50c7f7;
+}
+.jy_select .select_input input:focus{
+	outline-offset: 0px;
+}
+.jy_select .select_input i{
+	position: absolute;
+	right:10px;
+	top:0px;
+	line-height: 40px;
+}
+.jy_select .select_options{
+	position: absolute;
+	width:100%;
+	right:0px;
+	top:38px;
+	height:0px;
+	overflow: hidden;
+	z-index:999;
+}
+.jy_select .select_options .opt_items{
+	text-align: center;
+	border-bottom: 1px solid #D6D6D6;
+	cursor: pointer;
+	border: 1px solid #d6d6d6;
+	border-top: none;
+	box-sizing: border-box;
+}
+.jy_select .select_options .opt_items:hover{
+	background: #50c7f7;
+	color:#fff;
+	border-color:#50c7f7;
+}
+.jy_select .select_options .forbid{
+	color:#D6D6D6;
+	cursor:not-allowed;
+}
+.jy_select .select_options .forbid:hover{
+	background: #fff;
+	color:#D6D6D6;
+	border-color:#d6d6d6;
+}

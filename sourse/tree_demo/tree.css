@@ -1,0 +1,42 @@
+.jy-tree{
+    cursor: default;
+    background: #fff;
+    color: #5a5e66;
+    width: 500px;
+}
+.jy-tree .jy-tree-node{
+    white-space: nowrap;
+}
+.jy-tree .jy-tree-node__conment{
+    display: flex;
+    align-items: center;
+    height: 26px;
+    font-size: 14px;
+}
+.jy-tree-node__conment:hover{
+    background:#FFF5EE;
+}
+.jy-tree .jy-tree-node span{
+    float: left;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.jy-tree .jy-tree-node span i{
+    color: #b4bccc;
+}
+.jy-tree .jy-tree-node__span{
+    transform: rotate(90deg);
+}
+.jy-tree .jy-tree-node__span1{
+    transform: rotate(0deg);
+}
+.jy-tree-node__out{
+    display: none;
+}
+.jy-tree-node__out1{
+    display: block;
+}
+.jy-tree__more{
+    margin: auto;
+    margin-right: 0px;
+}

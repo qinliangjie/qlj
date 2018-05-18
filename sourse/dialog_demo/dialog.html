@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jy对话框</title>
+	<link rel="stylesheet" type="text/css" href="css/dialog.css">
+	<link rel="stylesheet" type="text/css" href="../base_css/iconfont.css" />
+</head>
+<body>
+
+<button  jy-modal='testV'>试一下</button>
+<button  jy-modal='testS'>试两下</button>
+<button  onclick="testfun()">试三下</button>
+<jy-dialog width="30%" id='testV' close-on-click-mask>
+	<div class="jyDiaConter">
+		<div class="jyDiaHeader">
+			sdfsadfasdf
+			<i class="icon iconfont icon-close alertclose" jy-modal-cancel></i>
+		</div>
+		<div class="jyDiaBody">
+			<table style="width: 800px">
+				<tr>
+					<td>这是</td>
+					<td>测试 </td>
+					<td>弹框</td>
+					<td>组件</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>2</td>
+					<td>2</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+				</tr>
+			</table>
+		</div>
+		<div class="jyDiafooter">
+			<div class="jyDiaBtn jyBtnOk" >确定</div>
+			<div class="jyDiaBtn jyBtncancel"  jy-modal-cancel>取消</div>
+		</div>
+	</div>
+</jy-dialog>
+<jy-dialog width="30%" id='testS'>
+	<div class="jyDiaConter">
+		<div class="jyDiaHeader">
+			1123
+			<i class="icon iconfont icon-close alertclose" jy-modal-cancel ></i>
+		</div>
+		<div class="jyDiaBody">
+			
+		</div>
+		<div class="jyDiafooter">
+			
+		</div>
+	</div>
+</jy-dialog>
+
+<script src="../base_js/base.js"></script>
+<script src="js/dialog.js"></script>
+
+<script>
+function testfun(){
+	document.getElementById('testS').show();
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>  
+<html>  
+  <meta charset="utf-8" />  
+  <title>变换对角线</title>  
+  
+  <canvas id="diagonal" width="701" height="401"> </canvas>  
+  <script>  
+        function drawDiagonal() {  
+            var canvas = document.getElementById('diagonal');
+            var gWidth = 10;
+            var width = 701;
+            var heigth = 401;
+            var context = canvas.getContext("2d");
+          context.fillText("w3school.com.cn",10,90);
+          context.strokeStyle = "#e0514b";
+          context.strokeWidth = 1;
+          context.beginPath();
+          for (var x = 0.5; x < width; x += gWidth*15) {
+              context.moveTo(x, 0);
+              context.lineTo(x, heigth);
+              context.stroke();
+          };
+          for (var y = 0.5; y < heigth; y += gWidth*10) {
+              context.moveTo(0, y);
+              context.lineTo(width, y);
+              context.stroke();
+          };
+          context.closePath();
+
+           context.beginPath();
+            context.moveTo(0,200);
+
+          var s = 0;
+          setInterval(function() {
+            //x轴的偏移
+           
+
+                s += 10;
+                
+                context.lineTo(s, Math.random() * 200);
+                context.stroke();
+                
+            
+            //y轴的偏移取随机数
+           
+          }, 10)
+           context.closePath();
+        }  
+  
+        window.addEventListener("load", drawDiagonal, true);  
+
+  </script>  
+</html>  

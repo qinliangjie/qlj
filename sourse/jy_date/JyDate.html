@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+<title>JY_date</title>
+<link href="css/JyDate.css" rel="stylesheet">
+<style>
+  body{
+    background: #f1f1f1;
+  }
+  .getValues{
+    width:300px;
+    height:40px;
+    line-height: 40px;
+    background: #f40;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    margin: 100px auto;
+    border-radius: 4px;
+
+  }
+</style>
+</head>
+<body>
+  <div style="width:200px;margin:140px auto;">
+    <div id="jy_date" class="jy_date_div"></div>
+
+    <div id="jy_dates" class="jy_date_div" style="margin-top:200px"></div>
+
+    <div class="getValues" onclick="getValues()">取值</div>
+  </div>
+</body>
+<script type="text/javascript" src="js/JyDate.js"></script>
+<script type="text/javascript">
+  //初始化实例
+  date_init('jy_date','en','yyyy-MM-dd hh:mm:ss');
+  date_init('jy_dates','ch','yyyy-MM-dd hh:mm:ss');
+
+  //取值实例
+  function getValues(){
+    console.log('jy_date : '+document.getElementById('jy_date').value);
+    console.log('jy_dates : '+document.getElementById('jy_dates').value);
+
+    console.log('jy_date : '+new Date(parseInt(document.getElementById('jy_date').value)));
+    console.log('jy_dates : '+new Date(parseInt(document.getElementById('jy_dates').value)));
+  }
+
+</script>
+</html>

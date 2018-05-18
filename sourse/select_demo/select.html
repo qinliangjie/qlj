@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/select.css">
+	<link rel="stylesheet" type="text/css" href="../base_css/iconfont.css" />
+	<style type="text/css">
+		.demo{width:1200px;margin:100px auto;min-height: 400px;background: #fff;padding:40px 0}
+	</style>
+</head>
+<body style="background: #e2e2e2">
+	<div class="demo">
+		<div style="width:50%;float: left;text-align: center;">
+			<div style="text-align: center;height:40px;line-height: 40px;">一行显示</div>
+			<jy:select options="getOption" id="selectCity" changes='awdawd' name="selecCity" value="2" label='选择地区' label-style='inline'></jy:select>
+		</div>
+		<div style="width:50%;float: left;">
+			<div style="text-align: center;height:40px;line-height: 40px;">两行显示</div>
+			<jy:select options="selectData" id="selectCitys" changes='changeCity' name="selecCitys" value="4" label='选择地区2' label-style='noline'></jy:select>
+		</div>
+		
+	</div>
+</body>
+<script src="../base_js/base.js"></script>
+<script src="js/select.js"></script>
+<script>
+	selectData = [
+		{
+				name:'option4',
+				val:'4',
+				disable:false
+			},
+			{
+				name:'option5',
+				val:'5',
+				disable:false
+			},
+			{
+				name:'option6',
+				val:'6',
+				disable:true
+			},
+			{
+				name:'option6',
+				val:'6',
+				disable:true
+			},
+			{
+				name:'option6',
+				val:'6',
+				disable:true
+			},
+	]
+	function getOption(){
+		var selectDatas = [
+			{
+				name:'option1',
+				val:'1',
+				disable:false
+			},
+			{
+				name:'option2',
+				val:'2',
+				disable:false
+			},
+			{
+				name:'option3',
+				val:'3',
+				disable:true
+			},
+//			{
+//				ad:''
+//			}
+		]
+		return selectDatas;
+	}
+	function changeCity(val){
+		alert(1)
+	}
+	function awdawd(val){
+		console.log(val)
+	}
+</script>
+</html>
